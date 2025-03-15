@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor HEIC para PNG</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="mainHeading">Conversor HEIC → PNG</h1>
+            <p>Converta suas imagens para PNG diretamente no navegador</p>
+        </header>
+        
+        <main>
+            <div class="upload-area" id="dropArea" role="region" aria-labelledby="mainHeading">
+                <input type="file" id="fileInput" accept=".heic, .heif" multiple>
+            </div>
+            
+            <!-- Adicione este novo botão -->
+            <button id="convertButton" class="convert-button" disabled>
+                Converter Selecionados
+                <span id="fileCounter">0</span>
+            </button>
+            
+            <div class="results-area">
+                <h2 class="sr-only">Arquivos Convertidos</h2>
+                <div id="resultList" aria-live="polite"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p></p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/libheif-js@1.14.0/libheif/libheif.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
